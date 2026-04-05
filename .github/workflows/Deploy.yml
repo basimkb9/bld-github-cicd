@@ -20,14 +20,14 @@ jobs:
 
     - name: Deploy Application
       run: |
-        ssh -o StrictHostKeyChecking=no ubuntu@ec2-100-27-74-122.compute-1.amazonaws.com << 'EOF'
+        ssh -o StrictHostKeyChecking=no ubuntu@ec2-16-16-225-0.eu-north-1.compute.amazonaws.com << 'EOF'
           sudo su -
           set -e
 
           # Go to deployment directory
-          cd /var/www/html/businesslogodesign-dockerkube-cicd-uit
+          cd /var/www/html/bld-github-cicd
 
-          git config --global --add safe.directory /var/www/html/businesslogodesign-dockerkube-cicd-uit
+          git config --global --add safe.directory /var/www/html/bld-github-cicd
 
           # Save last successful commit
           LAST_COMMIT=$(git rev-parse HEAD)
@@ -42,7 +42,7 @@ jobs:
           }
 
           # Set ownership for Apache
-          sudo chown -R www-data:www-data /var/www/html/businesslogodesign-dockerkube-cicd-uit
+          sudo chown -R www-data:www-data /var/www/html/bld-github-cicd
 
           # Optional: restart Apache
           # systemctl restart apache2
@@ -63,5 +63,5 @@ jobs:
           Repository: ${{ github.repository }}
           Branch: ${{ github.ref }}
           Site URL: "https://cicd.ressenza.pk"
-        to: hamza.ali@voxtrongroup.com
+        to: basimsiddique@yahoo.com
         from: hamzashaikhali20@gmail.com

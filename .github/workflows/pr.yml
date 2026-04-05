@@ -24,7 +24,7 @@ jobs:
             :crown: *An automated PR*
             This pull request has been created automatically by the workflow.
             Please review the changes and merge if acceptable.
-          pr_assignee: "AliHassan104"                       # Your GitHub username
+          pr_assignee: "basimkb9"                       # Your GitHub username
           pr_label: "auto-pr"                               # Comma-separated list (no spaces)
           pr_allow_empty: true                              # Creates pull request even if there are no changes
           github_token: ${{ secrets.TOKEN }}
@@ -53,5 +53,5 @@ jobs:
 
             Review & approve here:
             https://github.com/${{ steps.repo_info.outputs.repo }}/pull/${{ steps.repo_info.outputs.pr_number }}
-          to: hamza.ali@voxtrongroup.com
+          to: basimsiddique@yahoo.com
           from: hamzashaikhali20@gmail.com
